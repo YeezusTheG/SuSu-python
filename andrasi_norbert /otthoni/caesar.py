@@ -1,5 +1,5 @@
-text = "aello, world!"
-shift = 72
+text = input("Adja meg a titkosítani kívánt szöveget és nyomjon ENTER-t")
+shift = int(input("Adja meg az eltolás értékét és nyomjon ENTER-t"))
 cipher_text = ""
 
 for ch in text:
