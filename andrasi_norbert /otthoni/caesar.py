@@ -1,7 +1,13 @@
-text = input("Adja meg a titkosítani kívánt szöveget és nyomjon ENTER-t: ")
+with open("text.txt", "r") as inputfile:  #Az elérési útvonalat majd lehet meg kell változtatni
+    text = inputfile.read()
 while True:
     shift = int(input("Adja meg az eltolás értékét és nyomjon ENTER-t: "))
-    if shift = shift.isnumeric
+    try:
+        shift = int(shift)
+        break
+    except:
+        print("Számértéket adjon meg")
+
 cipher_text = ""
 
 for ch in text:
@@ -15,4 +21,5 @@ for ch in text:
     else:
         cipher_text += ch
 
-print(cipher_text)
+with open("text.txt", "w") as outputfile: #Az elérési útvonalat majd lehet meg kell változtatni itt is
+    outputfile.write(cipher_text)
