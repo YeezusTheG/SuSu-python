@@ -1,5 +1,7 @@
-text = input("Adja meg a titkosítani kívánt szöveget és nyomjon ENTER-t")
-shift = int(input("Adja meg az eltolás értékét és nyomjon ENTER-t"))
+text = input("Adja meg a titkosítani kívánt szöveget és nyomjon ENTER-t: ")
+while True:
+    shift = int(input("Adja meg az eltolás értékét és nyomjon ENTER-t: "))
+    if shift = shift.isnumeric
 cipher_text = ""
 
 for ch in text:
