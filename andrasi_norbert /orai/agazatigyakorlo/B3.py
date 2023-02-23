@@ -14,15 +14,17 @@ def adatokBeolvasasa(fajlnev):
             adatok.append([rendszam] + futasteljesitmenyek)
     return adatok
 
-def nullaKm(adatok):
-    szamlalo = 0
-    for i in adatok[1:]:
-        if i == 0:
-            szamlalo += 1
-    return szamlalo
+def nullaKm(lista):
+    nullak_szama = 0
+    for row in lista:
+        for elem in row[1:]:
+            if elem == 0:
+                nullak_szama += 1
+    return nullak_szama
+
 
 
 adatok = adatokBeolvasasa("andrasi_norbert //orai//agazatigyakorlo//fuvarok.txt")
 print(adatok)
 nullak_szama = nullaKm(adatok)
-print(nullak_szama)
+print(f"Az adatbázisban {nullak_szama}db 0 km havi futásteljesítményt tartalmazó hónap van.")
