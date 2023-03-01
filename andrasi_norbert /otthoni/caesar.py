@@ -9,14 +9,9 @@ while True:
         print("Számértéket adjon meg")
 
 cipher_text = ""
-
 for ch in text:
     if ch.isalpha():
         ascii_value = ord(ch)
-        if ch in 'áéíóőúüű':
-            ascii_value = (ascii_value - 225 + shift) % 8 + 225
-        elif ch in 'ÁÉÍÓŐÚÜŰ':
-            ascii_value = (ascii_value - 193 + shift) % 8 + 193
         if ch.islower():
             ascii_value = (ascii_value - 97 + shift) % 26 + 97
         elif ch.isupper():
