@@ -12,7 +12,20 @@ eladasok = adatokBeolvasasa("/home/markali/Dokumentumok/GitHub/SuSu-python/Mamir
 
 
 print(eladasok)
-
+maxeladas = []
 
 for key, value in eladasok.items():
+    maxeladas.append(sum(value))
     print(key, ':', sum(value))
+
+
+print(maxeladas)
+
+MaxErtek = maxeladas[0]
+MaxIndex = 0
+for i in range(len(maxeladas)):
+    if (maxeladas[i] >= MaxErtek):
+        MaxErtek == maxeladas[i]
+        MaxIndex == i
+
+print(MaxErtek,MaxIndex)
